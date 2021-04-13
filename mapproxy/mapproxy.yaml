@@ -1,0 +1,66 @@
+# -------------------------------
+# MapProxy example configuration.
+# -------------------------------
+#
+# This is a minimal MapProxy configuration.
+# See full_example.yaml and the documentation for more options.
+#
+
+# Starts the following services:
+# Demo:
+#     http://localhost:8080/demo
+# WMS:
+#     capabilities: http://localhost:8080/service?REQUEST=GetCapabilities
+# WMTS:
+#     capabilities: http://localhost:8080/wmts/1.0.0/WMTSCapabilities.xml
+#     first tile: http://localhost:8080/wmts/osm/webmercator/0/0/0.png
+# Tile service (compatible with OSM/etc.)
+#     first tile: http://localhost:8080/tiles/osm/webmercator/0/0/0.png
+# TMS:
+#     note: TMS is not compatible with OSM/Google Maps/etc.
+#     fist tile: http://localhost:8080/tms/1.0.0/osm/webmercator/0/0/0.png
+# KML:
+#     initial doc: http://localhost:8080/kml/osm/webmercator
+
+services:
+  demo:
+  tms:
+    use_grid_names: true
+    # origin for /tiles service
+    origin: 'nw'
+  kml:
+      use_grid_names: true
+  wmts:
+  wms:
+    srs: ['EPSG:4326', 'EPSG:3857', 'EPSG:4527']
+    md:
+      title: MapProxy WMS Proxy
+      abstract: This is a minimal MapProxy example.
+
+layers:
+  - name: test
+    title: test
+    sources: [test_cache]
+
+caches:
+  test_cache:
+    grids: [epsg4527]
+    sources: [test_wms]
+
+sources:
+  test_wms:
+    type: wms
+    req:
+      url: http://10.2.0.4:8080/geoserver/resources/wms?
+      layers: resources:1310032018BJ2DOM
+
+grids:
+  webmercator:
+    base: GLOBAL_WEBMERCATOR
+  epsg4527:
+    srs: 'EPSG:4527'
+    bbox: [ 39345754.30172075, 2500241.0879227463, 39654245.698279254, 5528578.958379041 ]
+    bbox_srs: 'EPSG:4527'
+    res: [ 1205.0445178066439, 602.5222589033219, 301.26112945166096, 150.63056472583048, 75.31528236291524, 37.65764118145762, 18.82882059072881, 9.414410295364405, 4.7072051476822026, 2.3536025738411013, 1.1768012869205506, 0.5884006434602753 ]
+
+globals:

@@ -1,0 +1,155 @@
+2021-04-12 09:21:26,770 INFO [org.geoserver] - GeoServer configuration lock is enabled
+2021-04-12 09:21:27,134 INFO [org.geoserver] - Loading catalog...
+2021-04-12 09:21:27,739 INFO [org.geoserver] - Loaded style 'green'
+2021-04-12 09:21:27,739 INFO [org.geoserver] - Loaded style 'burg'
+2021-04-12 09:21:27,740 INFO [org.geoserver] - Loaded style 'dem'
+2021-04-12 09:21:27,740 INFO [org.geoserver] - Loaded style 'poly_landmarks'
+2021-04-12 09:21:27,741 INFO [org.geoserver] - Loaded style 'poi'
+2021-04-12 09:21:27,741 INFO [org.geoserver] - Loaded style 'line'
+2021-04-12 09:21:27,742 INFO [org.geoserver] - Loaded style 'rain'
+2021-04-12 09:21:27,742 INFO [org.geoserver] - Loaded style 'restricted'
+2021-04-12 09:21:27,743 INFO [org.geoserver] - Loaded style 'capitals'
+2021-04-12 09:21:27,743 INFO [org.geoserver] - Loaded style 'cite_lakes'
+2021-04-12 09:21:27,744 INFO [org.geoserver] - Loaded style 'raster'
+2021-04-12 09:21:27,745 INFO [org.geoserver] - Loaded style 'generic'
+2021-04-12 09:21:27,746 INFO [org.geoserver] - Loaded style 'tiger_roads'
+2021-04-12 09:21:27,747 INFO [org.geoserver] - Loaded style 'giant_polygon'
+2021-04-12 09:21:27,747 INFO [org.geoserver] - Loaded style 'polygon'
+2021-04-12 09:21:27,749 INFO [org.geoserver] - Loaded style 'simple_streams'
+2021-04-12 09:21:27,750 INFO [org.geoserver] - Loaded style 'population'
+2021-04-12 09:21:27,750 INFO [org.geoserver] - Loaded style 'point'
+2021-04-12 09:21:27,751 INFO [org.geoserver] - Loaded style 'grass'
+2021-04-12 09:21:27,751 INFO [org.geoserver] - Loaded style 'pophatch'
+2021-04-12 09:21:27,752 INFO [org.geoserver] - Loaded style 'simple_roads'
+2021-04-12 09:21:27,753 WARN [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+2021-04-12 09:21:27,800 INFO [org.geoserver] - Read catalog in 619.9 ms
+2021-04-12 09:21:27,994 INFO [org.geoserver] - Loaded service 'WMTSInfoImpl-7c35dfbe:178c3ab51ba:-8000', enabled
+2021-04-12 09:21:28,006 INFO [org.geoserver] - Loaded service 'wcs', enabled
+2021-04-12 09:21:28,082 INFO [org.geoserver] - Loaded service 'wfs', enabled
+2021-04-12 09:21:28,119 INFO [org.geoserver] - Loaded service 'wms', enabled
+2021-04-12 09:21:28,212 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:21:28,323 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:21:28,323 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:21:28,323 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:21:28,536 WARN [config.XMLConfiguration] - ********************************************************************************
+2021-04-12 09:21:28,536 WARN [config.XMLConfiguration] - *** GWC configuration validation error: cvc-elt.1.a: 找不到元素 'gwcConfiguration' 的声明。
+2021-04-12 09:21:28,536 WARN [config.XMLConfiguration] - *** Will try to use configuration anyway. Please check the order of declared elements against the schema.
+2021-04-12 09:21:28,536 WARN [config.XMLConfiguration] - ********************************************************************************
+2021-04-12 09:21:28,648 INFO [config.XMLConfiguration] - Initializing GridSets from /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:21:28,650 INFO [config.XMLConfiguration] - Read GridSet EPSG:4527
+2021-04-12 09:21:28,651 INFO [config.XMLConfiguration] - Read GridSet EPSG:3857
+2021-04-12 09:21:28,651 INFO [config.XMLConfiguration] - Initializing layers from /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:21:28,723 INFO [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+2021-04-12 09:21:28,723 INFO [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+2021-04-12 09:21:28,723 INFO [gwc.layer] - Loading tile layers from gwc-layers
+2021-04-12 09:21:28,726 INFO [gwc.layer] - Loaded 0 tile layers in 2.517 ms
+2021-04-12 09:21:28,736 INFO [storage.BlobStoreAggregator] - BlobStoreConfiguration /home/kongyl/Programs/GeoServer/cache contained no blob store infos.
+2021-04-12 09:21:28,744 INFO [storage.DefaultStorageFinder] - *******************************************************************************************************************************************
+2021-04-12 09:21:28,744 INFO [storage.DefaultStorageFinder] - *** Found Servlet context parameter GEOWEBCACHE_CACHE_DIR set to /home/kongyl/Programs/GeoServer/cache, using it as the default prefix. ***
+2021-04-12 09:21:28,744 INFO [storage.DefaultStorageFinder] - *******************************************************************************************************************************************
+2021-04-12 09:21:29,007 INFO [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+2021-04-12 09:21:29,355 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:21:29,374 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:21:29,378 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /home/kongyl/Programs/GeoServer/cache/geowebcache-diskquota.xml
+2021-04-12 09:21:29,389 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /home/kongyl/Programs/GeoServer/cache/geowebcache-diskquota.xml
+2021-04-12 09:21:29,391 INFO [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+2021-04-12 09:21:29,391 INFO [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+2021-04-12 09:21:29,393 INFO [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 500.0 MB
+2021-04-12 09:21:29,404 INFO [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 10 SECONDS
+2021-04-12 09:21:29,689 INFO [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+2021-04-12 09:21:29,709 INFO [georss.GeoRSSPoller] - Initializing GeoRSS poller in a background job...
+2021-04-12 09:21:29,713 INFO [georss.GeoRSSPoller] - No enabled GeoRSS feeds found, poller will not run.
+2021-04-12 09:21:29,848 INFO [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+2021-04-12 09:21:29,848 INFO [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+2021-04-12 09:21:32,358 INFO [geoserver.config] - Initiated CatalogTimeStampUpdater
+2021-04-12 09:21:32,983 WARN [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+2021-04-12 09:21:38,287 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2021-04-12 09:21:38,287 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2021-04-12 09:21:39,200 INFO [geoserver.security] - Start reloading user/groups for service named default
+2021-04-12 09:21:39,206 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2021-04-12 09:21:51,194 INFO [geoserver.security] - Strong cryptography is available
+2021-04-12 09:22:07,656 WARN [geoserver.web] - Unable to find property: 'format.wfs.text/csv' for component:  [class=org.geoserver.web.demo.MapPreviewPage]. Locale: null, style: null
+2021-04-12 09:22:07,656 WARN [geoserver.web] - Unable to find property: 'format.wfs.text/csv' for component:  [class=org.geoserver.web.demo.MapPreviewPage]. Locale: null, style: null
+2021-04-12 09:22:07,656 WARN [geoserver.web] - Unable to find property: 'format.wfs.text/csv' for component:  [class=org.geoserver.web.demo.MapPreviewPage]. Locale: null, style: null
+2021-04-12 09:22:07,656 WARN [geoserver.web] - Unable to find property: 'format.wfs.text/csv' for component:  [class=org.geoserver.web.demo.MapPreviewPage]. Locale: null, style: null
+2021-04-12 09:23:05,227 INFO [georss.GeoRSSPoller] - destroy() invoked
+2021-04-12 09:23:05,228 INFO [geowebcache.GeoWebCacheDispatcher] - GeoWebCacheDispatcher.destroy() was invoked, shutting down.
+2021-04-12 09:23:05,229 INFO [diskquota.DiskQuotaMonitor] - Disk quota monitor shutting down...
+2021-04-12 09:23:05,230 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota usage monitor...
+2021-04-12 09:23:05,230 INFO [diskquota.QuotaUpdatesMonitor] - Shutting down quota usage monitor...
+2021-04-12 09:23:05,234 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota statistics gathering monitor...
+2021-04-12 09:23:05,234 INFO [diskquota.QueuedQuotaUpdatesConsumer] - Shutting down quota update background task due to InterruptedException
+2021-04-12 09:23:05,234 INFO [diskquota.QueuedUsageStatsConsumer] - Shutting down quota update background task due to interrupted exception
+2021-04-12 09:23:05,240 INFO [seed.SeederThreadPoolExecutor] - Initiating shut down for running and pending seed tasks...
+2021-04-12 09:23:05,240 INFO [seed.SeederThreadPoolExecutor] - Seeder thread pool executor shut down complete.
+2021-04-12 09:23:05,240 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
+2021-04-12 09:23:05,255 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@1f5e9d11 rejected from java.util.concurrent.ThreadPoolExecutor@2b420e9a[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+2021-04-12 09:23:05,259 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'geoWebCacheExtensions': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2021-04-12 09:23:25,526 INFO [org.geoserver] - GeoServer configuration lock is enabled
+2021-04-12 09:23:25,601 INFO [org.geoserver] - Loading catalog...
+2021-04-12 09:23:25,682 INFO [org.geoserver] - Loaded style 'green'
+2021-04-12 09:23:25,683 INFO [org.geoserver] - Loaded style 'burg'
+2021-04-12 09:23:25,684 INFO [org.geoserver] - Loaded style 'polygon'
+2021-04-12 09:23:25,684 INFO [org.geoserver] - Loaded style 'dem'
+2021-04-12 09:23:25,685 INFO [org.geoserver] - Loaded style 'poly_landmarks'
+2021-04-12 09:23:25,685 INFO [org.geoserver] - Loaded style 'poi'
+2021-04-12 09:23:25,686 INFO [org.geoserver] - Loaded style 'line'
+2021-04-12 09:23:25,686 INFO [org.geoserver] - Loaded style 'rain'
+2021-04-12 09:23:25,687 INFO [org.geoserver] - Loaded style 'restricted'
+2021-04-12 09:23:25,687 INFO [org.geoserver] - Loaded style 'capitals'
+2021-04-12 09:23:25,688 INFO [org.geoserver] - Loaded style 'raster'
+2021-04-12 09:23:25,688 INFO [org.geoserver] - Loaded style 'cite_lakes'
+2021-04-12 09:23:25,690 INFO [org.geoserver] - Loaded style 'generic'
+2021-04-12 09:23:25,690 INFO [org.geoserver] - Loaded style 'tiger_roads'
+2021-04-12 09:23:25,691 INFO [org.geoserver] - Loaded style 'giant_polygon'
+2021-04-12 09:23:25,693 INFO [org.geoserver] - Loaded style 'simple_streams'
+2021-04-12 09:23:25,698 INFO [org.geoserver] - Loaded style 'population'
+2021-04-12 09:23:25,699 INFO [org.geoserver] - Loaded style 'simple_roads'
+2021-04-12 09:23:25,699 INFO [org.geoserver] - Loaded style 'point'
+2021-04-12 09:23:25,700 INFO [org.geoserver] - Loaded style 'grass'
+2021-04-12 09:23:25,701 INFO [org.geoserver] - Loaded style 'pophatch'
+2021-04-12 09:23:25,701 WARN [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+2021-04-12 09:23:25,704 INFO [org.geoserver] - Read catalog in 100.9 ms
+2021-04-12 09:23:25,807 INFO [org.geoserver] - Loaded service 'WMTSInfoImpl-bf79dff:178c3ad1dee:-8000', enabled
+2021-04-12 09:23:25,816 INFO [org.geoserver] - Loaded service 'wcs', enabled
+2021-04-12 09:23:25,836 INFO [org.geoserver] - Loaded service 'wfs', enabled
+2021-04-12 09:23:25,857 INFO [org.geoserver] - Loaded service 'wms', enabled
+2021-04-12 09:23:25,888 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:23:25,955 WARN [config.GeoserverXMLResourceProvider] - Found no configuration file in config directory, will create one at '/home/kongyl/Programs/GeoServer/cache/geowebcache.xml' from template jar:file:/home/kongyl/Programs/GeoServer/geoserver-2.19.0/webapps/geoserver/WEB-INF/lib/gwc-core-1.19.0.jar!/geowebcache_empty.xml
+2021-04-12 09:23:25,960 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:23:25,961 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:23:26,013 WARN [config.XMLConfiguration] - ********************************************************************************
+2021-04-12 09:23:26,013 WARN [config.XMLConfiguration] - *** GWC configuration validation error: cvc-elt.1.a: 找不到元素 'gwcConfiguration' 的声明。
+2021-04-12 09:23:26,013 WARN [config.XMLConfiguration] - *** Will try to use configuration anyway. Please check the order of declared elements against the schema.
+2021-04-12 09:23:26,013 WARN [config.XMLConfiguration] - ********************************************************************************
+2021-04-12 09:23:26,089 INFO [config.XMLConfiguration] - Initializing GridSets from /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:23:26,091 INFO [config.XMLConfiguration] - Initializing layers from /home/kongyl/Programs/GeoServer/cache
+2021-04-12 09:23:26,140 INFO [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+2021-04-12 09:23:26,141 INFO [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+2021-04-12 09:23:26,141 INFO [gwc.layer] - Loading tile layers from gwc-layers
+2021-04-12 09:23:26,145 INFO [gwc.layer] - Loaded 0 tile layers in 3.720 ms
+2021-04-12 09:23:26,163 INFO [storage.BlobStoreAggregator] - BlobStoreConfiguration /home/kongyl/Programs/GeoServer/cache contained no blob store infos.
+2021-04-12 09:23:26,177 INFO [storage.DefaultStorageFinder] - *******************************************************************************************************************************************
+2021-04-12 09:23:26,177 INFO [storage.DefaultStorageFinder] - *** Found Servlet context parameter GEOWEBCACHE_CACHE_DIR set to /home/kongyl/Programs/GeoServer/cache, using it as the default prefix. ***
+2021-04-12 09:23:26,177 INFO [storage.DefaultStorageFinder] - *******************************************************************************************************************************************
+2021-04-12 09:23:26,270 INFO [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+2021-04-12 09:23:26,362 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:23:26,371 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/home/kongyl/Programs/GeoServer/cache'.
+2021-04-12 09:23:26,373 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /home/kongyl/Programs/GeoServer/cache/geowebcache-diskquota.xml
+2021-04-12 09:23:26,384 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /home/kongyl/Programs/GeoServer/cache/geowebcache-diskquota.xml
+2021-04-12 09:23:26,386 INFO [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+2021-04-12 09:23:26,386 INFO [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+2021-04-12 09:23:26,387 INFO [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 500.0 MB
+2021-04-12 09:23:26,400 INFO [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 10 SECONDS
+2021-04-12 09:23:26,615 INFO [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+2021-04-12 09:23:26,635 INFO [georss.GeoRSSPoller] - Initializing GeoRSS poller in a background job...
+2021-04-12 09:23:26,636 INFO [georss.GeoRSSPoller] - No enabled GeoRSS feeds found, poller will not run.
+2021-04-12 09:23:26,777 INFO [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+2021-04-12 09:23:26,777 INFO [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+2021-04-12 09:23:28,519 INFO [geoserver.config] - Initiated CatalogTimeStampUpdater
+2021-04-12 09:23:28,883 WARN [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+2021-04-12 09:23:31,537 INFO [geoserver.security] - Start reloading user/groups for service named default
+2021-04-12 09:23:31,545 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2021-04-12 09:23:31,695 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2021-04-12 09:23:31,695 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2021-04-12 09:23:49,286 INFO [geoserver.security] - Strong cryptography is available
