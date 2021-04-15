@@ -5,6 +5,7 @@ RUN \
   apt update && \
   apt install -y gdal-bin libgdal-java && \
   apt autoremove -y && \
+  rm -rf /var/cache/apk/* && \
   rm -rf /var/lib/apt/lists/*
 ENV LD_LIBRARY_PATH /usr/lib/jni
 # GeoServer
