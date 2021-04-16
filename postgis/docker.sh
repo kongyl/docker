@@ -1,7 +1,5 @@
 # build
-docker build -t kongyl/geoserver:2.19.0 .
+docker build -t kongyl/postgis:13.2-3 .
 # run
-docker run --name geoserver --restart=always -p 8090:8080 -v /home/kongyl/Programs/GeoServer:/geoserver -d kongyl/geoserver:2.19.0
-docker run --name geoserver --restart=always --network=postgres --ip=10.2.0.4 -v /home/kongyl/Programs/GeoServer:/geoserver -d kongyl/geoserver:2.19.0
-
-
+docker run --name postgres --restart=always -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d kongyl/postgis:13.2-3
+docker run --name postgres --restart=always -e POSTGRES_PASSWORD=postgres --network=postgres --ip=10.2.0.2 -d kongyl/postgis:13.2-3
