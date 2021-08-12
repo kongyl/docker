@@ -1,7 +1,4 @@
 # build
-docker build -t kongyl/geoserver:2.19.0 .
+docker build -t kongyl/geoserver:2.19.2 .
 # run
-docker run --name geoserver --restart=always -p 8090:8080 -v /home/kongyl/Programs/GeoServer:/geoserver -d kongyl/geoserver:2.19.0
-docker run --name geoserver --restart=always --network=postgres --ip=10.2.0.4 -v /home/kongyl/Programs/GeoServer:/geoserver -d kongyl/geoserver:2.19.0
-
-
+docker run -d --name geoserver --restart always -p 8090:8080 -v /home/kongyl/Programs/GeoServer:/geoserver kongyl/geoserver:2.19.2
