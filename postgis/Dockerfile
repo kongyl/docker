@@ -1,5 +1,5 @@
 # kongyl/postgis:14.0-3.1.4
-FROM postgres:14.0
+FROM postgres
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="14.0-3.1.4"

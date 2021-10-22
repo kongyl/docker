@@ -1,6 +1,3 @@
-# restart
-docker update --restart=always postgres
-
 # export
 docker export postgres >  /home/kongyl/Downloads/postgres.tar
 # import 
