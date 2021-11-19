@@ -1,5 +1,5 @@
 # kongyl/java:openjdk-17-jre-headless
-FROM ubuntu:focal-20210921
+FROM ubuntu:impish
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="openjdk-17-jre-headless"
