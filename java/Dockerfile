@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-17-jre-headless
+# kongyl/java:openjdk-17.0.1-jre-headless
 FROM ubuntu:impish
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17-jre-headless"
+LABEL version="openjdk-17.0.1-jre-headless"
 RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends openjdk-17-jre-headless && \
