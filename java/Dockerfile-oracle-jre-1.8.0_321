@@ -1,9 +1,0 @@
-# oracle-jre-1.8.0_321
-FROM ubuntu:impish
-LABEL author="kongyl"
-LABEL email="kongyl@126.com"
-LABEL version="oracle-jre-1.8.0_321"
-ADD jre-8u321-linux-x64.tar.gz /usr/local
-ENV JAVA_HOME=/usr/local/jre1.8.0_321
-ENV CLASSPATH=.:$JAVA_HOME/lib
-ENV PATH=$PATH:$JAVA_HOME/bin

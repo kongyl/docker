@@ -1,15 +1,9 @@
-# kongyl/java:openjdk-17.0.2-jre-headless
-FROM ubuntu:impish
+# oracle-jre-1.8.0_333
+FROM ubuntu:jammy
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.2-jre-headless"
-RUN \
-  apt-get update && \
-  apt-get install -y --no-install-recommends openjdk-17-jre-headless && \
-  apt-get autoremove -y && \  
-  apt-get clean && \
-  rm -rf /var/cache/apt/* && \
-  rm -rf /var/lib/apt/lists/*
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+LABEL version="oracle-jre-1.8.0_333"
+ADD jre-8u333-linux-x64.tar.gz /usr/local
+ENV JAVA_HOME=/usr/local/jre1.8.0_333
 ENV CLASSPATH=.:$JAVA_HOME/lib
 ENV PATH=$PATH:$JAVA_HOME/bin
