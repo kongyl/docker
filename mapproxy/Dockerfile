@@ -1,11 +1,20 @@
-FROM debian:stable-slim
-MAINTAINER kongyl
+# kongyl/mapproxy:1.15.1
+FROM ubuntu:jammy
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="1.15.1"
 # mapproxy
 RUN \
+  mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ jammy main restricted universe multiverse" >>/etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ jammy-security main restricted universe multiverse" >>/etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ jammy-updates main restricted universe multiverse" >>/etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ jammy-proposed main restricted universe multiverse" >>/etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ jammy-backports main restricted universe multiverse" >>/etc/apt/sources.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends python3 python3-pip python3-pil python3-yaml && \
-  pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple/ pyproj==2.6.1 && \
-  pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple/ setuptools && \
+  pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple/ pyproj && \
+  pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple/ six && \
   pip3 install -i https://pypi.mirrors.ustc.edu.cn/simple/ MapProxy && \
   apt-get autoremove -y && \
   rm -rf /root/.cache/pip && \
