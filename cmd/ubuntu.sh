@@ -1,4 +1,3 @@
-docker run --name ubuntu -dit ubuntu /bin/bash
-
+docker run -dit --name ubuntu ubuntu
 docker attach ubuntu
 # Ctrl+p+q to detach
