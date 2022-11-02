@@ -1,0 +1,1 @@
+docker run -d --name geoserver -p 8090:8080 -v /home/kongyl/Test/geoserver:/geoserver kongyl/geoserver:2.21.2
