@@ -1,2 +1,4 @@
 tmp
 run
+*.tar
+*.tar.gz
