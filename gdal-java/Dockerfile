@@ -1,5 +1,5 @@
 # kongyl/gdal-java:3.4.1-8
-FROM kongyl/java:oracle-jre-1.8.0_333
+FROM kongyl/java:oracle-jre-1.8.0_351
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="3.4.1-8"
