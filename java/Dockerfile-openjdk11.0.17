@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-11.0.16-jre-headless
+# kongyl/java:openjdk-11.0.17-jre-headless
 FROM ubuntu:jammy
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-11.0.16-jre-headless"
+LABEL version="openjdk-11.0.17-jre-headless"
 RUN \
   mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
   echo "deb http://mirrors.aliyun.com/ubuntu/ jammy main restricted universe multiverse" >>/etc/apt/sources.list && \
