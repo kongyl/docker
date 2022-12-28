@@ -1,5 +1,5 @@
 # kongyl/geoserver:2.22.0
-FROM kongyl/java:openjdk-17.0.5-jre-headless
+FROM kongyl/java:openjdk-11.0.17-jre-headless
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="2.22.0"
