@@ -1,9 +1,0 @@
-# kongyl/java:oracle-jre-1.8.0_351
-FROM ubuntu:kinetic
-LABEL author="kongyl"
-LABEL email="kongyl@126.com"
-LABEL version="oracle-jre-1.8.0_351"
-ADD server-jre-8u351-linux-x64.tar.gz /usr/local
-ENV JAVA_HOME=/usr/local/jdk1.8.0_351
-ENV CLASSPATH=.:$JAVA_HOME/lib
-ENV PATH=$PATH:$JAVA_HOME/bin
