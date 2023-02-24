@@ -1,5 +1,5 @@
 # kongyl/geoserver:2.22.2-gdal
-FROM kongyl/gdal-java:3.5.1-11
+FROM kongyl/gdal-java:3.4.1-11
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="2.22.2-gdal"
