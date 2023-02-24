@@ -1,5 +1,5 @@
 # kongyl/java:oracle-jre-1.8.0_361
-FROM ubuntu:kinetic
+FROM ubuntu:jammy
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="oracle-jre-1.8.0_361"
