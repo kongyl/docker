@@ -1,1 +1,1 @@
-sudo podman run -d --name minio -p 9000:9000 -p 9090:9090 -e "MINIO_ACCESS_KEY=minio" -e "MINIO_SECRET_KEY=minio" -v /home/kongyl/Test/minio/data:/data -v /home/kongyl/Test/minio/conf:/root/.minio docker.io/minio/minio server /data --console-address ":9090" -address ":9000"
+sudo podman run -d --name minio -p 9000:9000 -p 9090:9090 -e "MINIO_ACCESS_KEY=minioadmin" -e "MINIO_SECRET_KEY=minioadmin" -v /home/kongyl/Test/minio/data:/data -v /home/kongyl/Test/minio/conf:/root/.minio docker.io/minio/minio server /data --console-address ":9090" -address ":9000"
