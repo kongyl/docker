@@ -1,5 +1,5 @@
 # kongyl/gdal-java:3.4.1-11
-FROM kongyl/java:openjdk-11.0.17-jre-headless
+FROM kongyl/java:openjdk-11.0.18-jre-headless
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="3.4.1-11"
