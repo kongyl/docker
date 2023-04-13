@@ -1,0 +1,11 @@
+# kongyl/geoserver:2.23.0-gdal-s3-bullseye
+FROM kongyl/gdal-java:3.2.2-11-bullseye
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="2.23.0-gdal-s3-bullseye"
+ADD geoserver-2.23.0.tar.gz /root
+ENV GEOSERVER_HOME=/root/geoserver-2.23.0 GEOSERVER_DATA_DIR=/geoserver/data
+ENV GDAL_DATA /usr/share/gdal # for geoserver gdal
+EXPOSE 8080
+#WORKDIR /root/geoserver-2.23.0/bin
+ENTRYPOINT ["/root/geoserver-2.23.0/bin/startup.sh"]
