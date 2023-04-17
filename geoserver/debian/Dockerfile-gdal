@@ -3,7 +3,7 @@ FROM kongyl/gdal-java:3.2.2-11-bullseye
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="2.23.0-gdal-bullseye"
-ADD geoserver-2.23.0.tar.gz /root
+ADD geoserver-2.23.0-bullseye.tar.gz /root
 ENV GEOSERVER_HOME=/root/geoserver-2.23.0 GEOSERVER_DATA_DIR=/geoserver/data
 ENV GDAL_DATA /usr/share/gdal # for geoserver gdal
 EXPOSE 8080
