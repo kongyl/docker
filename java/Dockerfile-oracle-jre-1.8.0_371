@@ -1,4 +1,4 @@
-# kongyl/java:oracle-jre-1.8.0_371
+# registry.cn-beijing.aliyuncs.com/kongyl/java:oracle-jre-1.8.0_371
 FROM ubuntu:jammy
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
