@@ -3,7 +3,6 @@ FROM docker.io/kongyl/gdal-java:3.6.2-11
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="2.23.0-gdal"
-MAINTAINER kongyl
 ADD geoserver-2.23.0.tar.gz /root
 ENV GEOSERVER_HOME=/root/geoserver-2.23.0 GEOSERVER_DATA_DIR=/geoserver/data
 ENV GDAL_DATA /usr/share/gdal # for geoserver gdal
