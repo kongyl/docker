@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-17.0.6-jre-headless
+# kongyl/java:openjdk-17.0.7-jre-headless
 FROM ubuntu:jammy
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.6-jre-headless"
+LABEL version="openjdk-17.0.7-jre-headless"
 RUN \
   mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse" >>/etc/apt/sources.list && \
