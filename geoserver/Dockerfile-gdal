@@ -1,10 +1,10 @@
-# kongyl/geoserver:2.22.3-gdal
-FROM kongyl/gdal-java:3.4.1-11
+# kongyl/geoserver:2.22.4-gdal
+FROM kongyl/gdal-java:3.2.2-11
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="2.22.3-gdal"
-ADD geoserver-2.22.3.tar.gz /root
-ENV GEOSERVER_HOME=/root/geoserver-2.22.3 GEOSERVER_DATA_DIR=/geoserver/data
+LABEL version="2.22.4-gdal"
+ADD geoserver-2.22.4.tar.gz /root
+ENV GEOSERVER_HOME=/root/geoserver-2.22.4 GEOSERVER_DATA_DIR=/geoserver/data
 ENV GDAL_DATA /usr/share/gdal
 EXPOSE 8080
-ENTRYPOINT ["/root/geoserver-2.22.3/bin/startup.sh"]
+ENTRYPOINT ["/root/geoserver-2.22.4/bin/startup.sh"]
