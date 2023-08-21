@@ -1,0 +1,9 @@
+# kongyl/java:openjdk-11.0.20-jdk-centos
+FROM centos:7.9.2009
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="openjdk-11.0.20-jdk-centos"
+ADD OpenJDK11U-jdk_x64_linux_hotspot_11.0.20_8.tar.gz /opt
+ENV JAVA_HOME=/opt/jdk-11.0.20+8
+ENV CLASSPATH=.:$JAVA_HOME/lib
+ENV PATH=$PATH:$JAVA_HOME/bin
