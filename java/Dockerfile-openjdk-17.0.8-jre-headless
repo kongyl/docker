@@ -1,5 +1,5 @@
 # kongyl/java:openjdk-17.0.8-jre-headless
-FROM debian:bookworm-slim
+FROM debian:bookworm
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="openjdk-17.0.8-jre-headless"
