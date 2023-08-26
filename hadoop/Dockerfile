@@ -1,0 +1,71 @@
+# kongyl/gdal-java:3.4.3-11-hdfs-centos
+FROM kongyl/java:openjdk-11.0.20-jdk-centos
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL java.version="openjdk-11.0.20-jdk"
+LABEL hadoop.version="3.3.5"
+LABEL gdal.version="3.4.3"
+
+# add dependencies
+ADD cmake-3.27.2-linux-x86_64.tar.gz /opt
+ADD apache-ant-1.10.13-bin.tar.gz /opt
+ADD swig-4.1.1.tar.gz /opt
+ADD sqlite-autoconf-3420000.tar.gz /opt
+ADD proj-9.2.1.tar.gz /opt
+ADD hadoop-3.3.5.tar.gz /opt
+ADD gdal-3.4.3.tar.gz /opt
+ENV PATH=$PATH:/opt/cmake-3.27.2-linux-x86_64/bin:/opt/apache-ant-1.10.13/bin
+
+# run
+RUN \
+  # gcc
+  yum install -y pcre2-devel && \
+  rm -f /usr/bin/gcc && \
+  yum install -y centos-release-scl && \
+  yum install -y devtoolset-11-gcc-c++ && \
+  ln -s /opt/rh/devtoolset-11/root/bin/gcc /usr/bin/gcc && \
+  ln -s /opt/rh/devtoolset-11/root/bin/g++ /usr/bin/g++ && \
+  # swig
+  mkdir /opt/swig-4.1.1/build && \
+  cd /opt/swig-4.1.1/build && \
+  ../configure --prefix=/usr && \
+  make && \
+  make install && \
+  # sqlite
+  mkdir /opt/sqlite-autoconf-3420000/build && \
+  cd /opt/sqlite-autoconf-3420000/build && \
+  CFLAGS="-DSQLITE_ENABLE_COLUMN_METADATA" ../configure --prefix=/usr && \
+  make && \
+  make install && \
+  sh -c 'echo "/usr/lib" >> /etc/ld.so.conf.d/sqlite3.conf' && \
+  ldconfig && \
+  # proj
+  yum install -y libtiff-devel && \
+  mkdir /opt/proj-9.2.1/build && \
+  cd /opt/proj-9.2.1/build && \
+  cmake -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_CURL=OFF -DBUILD_PROJSYNC=OFF -DBUILD_APPS=OFF -DBUILD_TESTING=OFF .. && \
+  cmake --build . && \
+  cmake --build . --target install && \
+  # gdal
+  yum install -y libcurl-devel && \
+  cd /opt/gdal-3.6.4/build && \
+  ./configure --prefix=/usr --with-java=/opt/jdk1.8.0_381 --with-hdfs=/opt/hadoop-3.3.5 && \
+  make && \
+  make install && \
+  # clean
+  rm -f /usr/bin/gcc && \
+  rm -f /usr/bin/g++ && \
+  yum remove -y devtoolset-11-runtime && \
+  yum remove -y centos-release-scl-rh && \
+  rm -rf /opt/gdal-3.4.3 && \
+  rm -rf /opt/proj-9.2.1 && \
+  rm -rf /opt/sqlite-autoconf-3420000 && \
+  rm -rf /opt/swig-4.1.1 && \
+  rm -rf /opt/apache-ant-1.10.13 && \
+  rm -rf /opt/cmake-3.27.2-linux-x86_64
+
+ENV HADOOP_HOME=/opt/hadoop-3.3.5
+ENV CLASSPATH=$CLASSPATH:$HADOOP_HOME/etc/hadoop:$HADOOP_HOME/share/hadoop/common/*:$HADOOP_HOME/share/hadoop/common/lib/*:$HADOOP_HOME/share/hadoop/hdfs/*
+ENV LD_LIBRARY_PATH=$JRE_HOME/lib/amd64/server:$HADOOP_HOME/lib/native:/usr/share/java
+ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$JAVA_HOME/bin:$JRE_HOME/bin
+
