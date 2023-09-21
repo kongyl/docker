@@ -1,0 +1,11 @@
+# registry.cn-beijing.aliyuncs.com/kongyl/java:oracle-jdk-1.8.0_381
+FROM debian:bookworm
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="oracle-jdk-1.8.0_381"
+ADD jdk-8u381-linux-x64.tar.gz /usr/local
+ADD apache-maven-3.9.4-bin.tar.gz /usr/local
+ENV JAVA_HOME=/usr/local/jdk1.8.0_381
+ENV CLASSPATH=.:$JAVA_HOME/lib
+ENV MAVEN_HOME=/usr/local/apache-maven-3.9.4
+ENV PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
