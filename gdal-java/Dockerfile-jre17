@@ -1,8 +1,8 @@
-# kongyl/gdal-java:3.6.2-17
+# kongyl/gdal-java:3.6.2-jre17
 FROM kongyl/java:openjdk-17.0.8-jre-headless
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="3.6.2-17"
+LABEL version="3.6.2-jre17"
 RUN \
   mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free" >>/etc/apt/sources.list && \
