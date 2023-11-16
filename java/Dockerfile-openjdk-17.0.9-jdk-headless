@@ -1,15 +1,15 @@
-# kongyl/java:openjdk-17.0.8-jre-headless
+# kongyl/java:openjdk-17.0.9-jdk-headless
 FROM debian:bookworm
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.8-jre-headless"
+LABEL version="openjdk-17.0.9-jdk-headless"
 RUN \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
   echo "deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
   apt-get update && \
-  apt-get install -y --no-install-recommends openjdk-17-jre-headless && \
+  apt-get install -y --no-install-recommends openjdk-17-jdk-headless maven && \
   apt-get autoremove -y && \  
   apt-get clean && \
   rm -rf /var/cache/apt/* && \
