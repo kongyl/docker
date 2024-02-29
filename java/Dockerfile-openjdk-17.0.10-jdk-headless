@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-17.0.9-jdk-headless
+# kongyl/java:openjdk-17.0.10-jdk-headless
 FROM debian:bookworm
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.9-jdk-headless"
+LABEL version="openjdk-17.0.10-jdk-headless"
 RUN \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware" >>/etc/apt/sources.list && \
