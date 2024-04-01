@@ -1,0 +1,13 @@
+# kongyl/gdal-java:3.8.4-jre21
+FROM kongyl/java:openjdk-21.0.2-jre-headless
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="3.8.4-jdk21"
+RUN \
+  apt-get update && \
+  apt-get install -y gdal-bin && \
+  apt-get autoremove -y && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+ADD libgdalalljni-3.8.4.so /usr/lib/jni/libgdalalljni.so
+ENV LD_LIBRARY_PATH /usr/lib/jni

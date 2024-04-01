@@ -1,8 +1,8 @@
-# kongyl/gdal-java:3.6.2-jdk17
+# kongyl/gdal-java:3.8.4-jdk17
 FROM kongyl/java:openjdk-17.0.10-jdk-headless
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="3.6.2-jdk17"
+LABEL version="3.8.4-jdk17"
 RUN \
   mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free" >>/etc/apt/sources.list && \
@@ -14,5 +14,5 @@ RUN \
   apt-get autoremove -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
-ADD libgdalalljni-3.6.2.so /usr/lib/jni/libgdalalljni.so
+ADD libgdalalljni-3.8.4.so /usr/lib/jni/libgdalalljni.so
 ENV LD_LIBRARY_PATH /usr/lib/jni
