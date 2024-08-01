@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-21.0.3-jdk-headless
+# kongyl/java:openjdk-21.0.4-jdk-headless
 FROM ubuntu:noble
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-21.0.3-jdk-headless"
+LABEL version="openjdk-21.0.4-jdk-headless"
 RUN \
   mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
   echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse" >>/etc/apt/sources.list && \

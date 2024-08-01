@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-17.0.11-jdk-headless
+# kongyl/java:openjdk-17.0.12-jdk-headless
 FROM ubuntu:noble
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.11-jdk-headless"
+LABEL version="openjdk-17.0.12-jdk-headless"
 RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends openjdk-17-jdk-headless maven && \
