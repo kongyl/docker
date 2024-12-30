@@ -4,15 +4,16 @@ LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="3.9.1-jdk17"
 RUN \
-  mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
-  echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ oracular main restricted universe multiverse" >>/etc/apt/sources.list && \
-  echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ oracular-security main restricted universe multiverse" >>/etc/apt/sources.list && \
-  echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ oracular-updates main restricted universe multiverse" >>/etc/apt/sources.list && \
-  echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ oracular-backports main restricted universe multiverse" >>/etc/apt/sources.list && \ 
+  rm -f /etc/apt/sources.list.d/ubuntu.sources && \
+  echo "Types: deb" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  echo "Suites: oracular oracular-updates oracular-backports oracular-security" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  echo "Components: main restricted universe multiverse" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  echo "Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg" >>/etc/apt/sources.list.d/ubuntu.sources && \
   apt-get update && \
   apt-get install -y gdal-bin && \
   apt-get autoremove -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 ADD libgdalalljni-3.9.1.so /usr/lib/jni/libgdalalljni.so
-ENV LD_LIBRARY_PATH /usr/lib/jni
+ENV LD_LIBRARY_PATH=/usr/lib/jni
