@@ -1,15 +1,21 @@
 # kongyl/java:openjdk-17.0.13-jdk-headless
-FROM ubuntu:oracular
+FROM debian:bookworm
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
 LABEL version="openjdk-17.0.13-jdk-headless"
 RUN \
-  rm -f /etc/apt/sources.list.d/ubuntu.sources && \
-  echo "Types: deb" >>/etc/apt/sources.list.d/ubuntu.sources && \
-  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu" >>/etc/apt/sources.list.d/ubuntu.sources && \
-  echo "Suites: oracular oracular-updates oracular-backports oracular-security" >>/etc/apt/sources.list.d/ubuntu.sources && \
-  echo "Components: main restricted universe multiverse" >>/etc/apt/sources.list.d/ubuntu.sources && \
-  echo "Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  rm -f /etc/apt/sources.list.d/debian.sources && \
+  echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/debian" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Suites: bookworm bookworm-updates bookworm-backports" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Components: main contrib" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Suites: bookworm-security" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Components: main contrib" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" >>/etc/apt/sources.list.d/debian.sources && \
   apt-get update && \
   apt-get install -y --no-install-recommends openjdk-17-jdk-headless maven && \
   apt-get autoremove -y && \  
