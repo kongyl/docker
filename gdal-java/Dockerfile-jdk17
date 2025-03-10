@@ -6,7 +6,7 @@ LABEL version="3.6.2-jdk17"
 RUN \
   rm -f /etc/apt/sources.list.d/debian.sources && \
   echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
-  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/debian" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "URIs: https://mirrors.tuna.tsinghua.edu.cn/debian" >>/etc/apt/sources.list.d/debian.sources && \
   echo "Suites: bookworm bookworm-updates bookworm-backports" >>/etc/apt/sources.list.d/debian.sources && \
   echo "Components: main contrib" >>/etc/apt/sources.list.d/debian.sources && \
   echo "Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" >>/etc/apt/sources.list.d/debian.sources && \
