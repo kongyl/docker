@@ -1,13 +1,13 @@
-# kongyl/java:openjdk-21.0.5-jdk-headless
-FROM ubuntu:oracular
+# kongyl/java:openjdk-21.0.6-jdk-headless
+FROM ubuntu
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-21.0.5-jdk-headless"
+LABEL version="openjdk-21.0.6-jdk-headless"
 RUN \
   rm -f /etc/apt/sources.list.d/ubuntu.sources && \
   echo "Types: deb" >>/etc/apt/sources.list.d/ubuntu.sources && \
   echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/ubuntu" >>/etc/apt/sources.list.d/ubuntu.sources && \
-  echo "Suites: oracular oracular-updates oracular-backports oracular-security" >>/etc/apt/sources.list.d/ubuntu.sources && \
+  echo "Suites: noble noble-updates noble-backports noble-security" >>/etc/apt/sources.list.d/ubuntu.sources && \
   echo "Components: main restricted universe multiverse" >>/etc/apt/sources.list.d/ubuntu.sources && \
   echo "Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg" >>/etc/apt/sources.list.d/ubuntu.sources && \
   apt-get update && \

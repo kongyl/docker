@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-17.0.13-jdk-headless
-FROM debian:bookworm
+# kongyl/java:openjdk-17.0.14-jdk-headless
+FROM debian
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-17.0.13-jdk-headless"
+LABEL version="openjdk-17.0.14-jdk-headless"
 RUN \
   rm -f /etc/apt/sources.list.d/debian.sources && \
   echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
