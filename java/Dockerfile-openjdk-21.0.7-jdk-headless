@@ -1,8 +1,8 @@
-# kongyl/java:openjdk-21.0.6-jdk-headless
+# kongyl/java:openjdk-21.0.7-jdk-headless
 FROM ubuntu
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="openjdk-21.0.6-jdk-headless"
+LABEL version="openjdk-21.0.7-jdk-headless"
 RUN \
   rm -f /etc/apt/sources.list.d/ubuntu.sources && \
   echo "Types: deb" >>/etc/apt/sources.list.d/ubuntu.sources && \
