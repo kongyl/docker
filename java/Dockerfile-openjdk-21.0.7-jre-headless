@@ -1,8 +1,8 @@
-# kongyl/gdal-java:3.8.4-jre21
-FROM kongyl/java:openjdk-21.0.7-jre-headless
+# kongyl/java:openjdk-21.0.7-jre-headless
+FROM ubuntu
 LABEL author="kongyl"
 LABEL email="kongyl@126.com"
-LABEL version="3.8.4-jre21"
+LABEL version="openjdk-21.0.7-jre-headless"
 RUN \
   rm -f /etc/apt/sources.list.d/ubuntu.sources && \
   echo "Types: deb" >>/etc/apt/sources.list.d/ubuntu.sources && \
@@ -11,9 +11,11 @@ RUN \
   echo "Components: main restricted universe multiverse" >>/etc/apt/sources.list.d/ubuntu.sources && \
   echo "Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg" >>/etc/apt/sources.list.d/ubuntu.sources && \
   apt-get update && \
-  apt-get install -y gdal-bin && \
-  apt-get autoremove -y && \
+  apt-get install -y --no-install-recommends openjdk-21-jre-headless && \
+  apt-get autoremove -y && \  
   apt-get clean && \
+  rm -rf /var/cache/apt/* && \
   rm -rf /var/lib/apt/lists/*
-ADD libgdalalljni-3.8.4.so /usr/lib/jni/libgdalalljni.so
-ENV LD_LIBRARY_PATH=/usr/lib/jni
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+ENV CLASSPATH=.:$JAVA_HOME/lib
+ENV PATH=$PATH:$JAVA_HOME/bin
