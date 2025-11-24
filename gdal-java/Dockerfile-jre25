@@ -1,0 +1,25 @@
+# kongyl/gdal-java:3.10.3-jre25
+FROM kongyl/java:openjdk-25.0.1-jre-headless
+LABEL author="kongyl"
+LABEL email="kongyl@126.com"
+LABEL version="3.10.3-jre25"
+RUN \
+  rm -f /etc/apt/sources.list.d/debian.sources && \
+  echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/debian" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Suites: trixie trixie-updates trixie-backports" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Components: main contrib" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Types: deb" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "URIs: http://mirrors.tuna.tsinghua.edu.cn/debian-security" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Suites: trixie-security" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Components: main contrib" >>/etc/apt/sources.list.d/debian.sources && \
+  echo "Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" >>/etc/apt/sources.list.d/debian.sources && \
+  apt-get update && \
+  apt-get install -y gdal-bin && \
+  apt-get autoremove -y && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+ADD libgdalalljni-3.10.3.so /usr/lib/jni/libgdalalljni.so
+ENV LD_LIBRARY_PATH=/usr/lib/jni
